@@ -1,0 +1,54 @@
+/* =========================================================
+   Heliatek Design-Tokens
+   ---------------------------------------------------------
+   Zentrale Stellschrauben des Design-Systems.
+   Werte hier gegen die Tokens aus dem eigenen Design-System
+   (Figma) tauschen – alle Komponenten ziehen sich ihre Farben,
+   Abstände und Schriften ausschließlich aus dieser Datei.
+   ========================================================= */
+:root {
+    /* Farben – Marke */
+    --hl-color-brand-dark: #00333b;   /* dunkles Petrol, Flächen/Footer */
+    --hl-color-brand: #00666f;        /* Primärfarbe */
+    --hl-color-brand-light: #e5f2f3;  /* helle Flächen, Hintergründe */
+    --hl-color-accent: #a4c625;       /* Heliatek-Grün, CTAs/Akzente */
+    --hl-color-accent-dark: #7d9a15;  /* Hover-Zustand Akzent */
+
+    /* Farben – Neutral */
+    --hl-color-text: #1d2b2e;
+    --hl-color-text-muted: #5a6b6e;
+    --hl-color-text-inverse: #ffffff;
+    --hl-color-surface: #ffffff;
+    --hl-color-surface-alt: #f4f7f7;
+    --hl-color-border: #d8e2e3;
+
+    /* Typografie */
+    --hl-font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --hl-font-size-base: 1rem;        /* 16px */
+    --hl-font-size-sm: 0.875rem;
+    --hl-font-size-lg: 1.125rem;
+    --hl-font-size-h1: clamp(2rem, 5vw, 3.25rem);
+    --hl-font-size-h2: clamp(1.6rem, 3.5vw, 2.375rem);
+    --hl-font-size-h3: 1.375rem;
+    --hl-line-height: 1.6;
+    --hl-line-height-heading: 1.15;
+    --hl-font-weight-bold: 700;
+
+    /* Abstände */
+    --hl-space-xs: 0.5rem;
+    --hl-space-sm: 1rem;
+    --hl-space-md: 1.5rem;
+    --hl-space-lg: 2.5rem;
+    --hl-space-xl: 4rem;
+    --hl-section-padding: clamp(3rem, 8vw, 6rem);
+
+    /* Layout */
+    --hl-container-max: 75rem;        /* 1200px */
+    --hl-container-pad: 1.25rem;
+    --hl-radius: 0.75rem;
+    --hl-radius-pill: 999px;
+    --hl-shadow: 0 8px 24px rgba(0, 51, 59, 0.10);
+
+    /* Übergänge */
+    --hl-transition: 180ms ease;
+}

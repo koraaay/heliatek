@@ -1,0 +1,31 @@
+<section class="hl-section">
+    <div class="hl-container">
+        <f:if condition="{data.kicker}">
+            <p class="hl-section__kicker">{data.kicker}</p>
+        </f:if>
+        <h2>{data.headline}</h2>
+        <f:if condition="{data.intro}">
+            <p class="hl-section__intro">{data.intro -> f:format.nl2br()}</p>
+        </f:if>
+        <div class="hl-cards__grid">
+            <f:for each="{data.card_items}" as="card">
+                <article class="hl-card">
+                    <f:if condition="{card.image}">
+                        <div class="hl-card__media">
+                            <f:for each="{card.image}" as="image">
+                                <f:image image="{image}" alt="{image.alternative}" loading="lazy" />
+                            </f:for>
+                        </div>
+                    </f:if>
+                    <div class="hl-card__body">
+                        <h3 class="hl-card__title">{card.title}</h3>
+                        <p class="hl-card__text">{card.text -> f:format.nl2br()}</p>
+                        <f:if condition="{card.link}">
+                            <f:link.typolink parameter="{card.link}" class="hl-card__link">{card.link_label}</f:link.typolink>
+                        </f:if>
+                    </div>
+                </article>
+            </f:for>
+        </div>
+    </div>
+</section>

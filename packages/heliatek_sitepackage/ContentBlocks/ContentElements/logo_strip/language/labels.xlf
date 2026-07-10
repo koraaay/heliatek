@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="plaintext" original="labels.xlf" source-language="de" product-name="logo-strip">
+        <body>
+            <trans-unit id="title"><source>Logo-Leiste (Partner / Referenzen)</source></trans-unit>
+            <trans-unit id="description"><source>Reihe von Partner- oder Kundenlogos, ausgegraut mit Farbeffekt bei Berührung</source></trans-unit>
+            <trans-unit id="headline.label"><source>Überschrift (optional)</source></trans-unit>
+            <trans-unit id="logos.label"><source>Logos</source></trans-unit>
+        </body>
+    </file>
+</xliff>

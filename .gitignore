@@ -1,0 +1,8 @@
+/public/*
+!/public/.htaccess
+/var/
+/vendor/
+/composer.lock
+.env
+.DS_Store
+node_modules/

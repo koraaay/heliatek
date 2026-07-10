@@ -1,0 +1,17 @@
+name: heliatek/quote
+title: Zitat / Referenzstimme
+group: heliatek
+prefixFields: false
+fields:
+  - identifier: quote
+    type: Textarea
+    rows: 4
+    required: true
+  - identifier: author
+    type: Text
+  - identifier: author_role
+    type: Text
+  - identifier: image
+    type: File
+    maxitems: 1
+    allowed: common-image-types

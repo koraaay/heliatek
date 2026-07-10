@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="plaintext" original="labels.xlf" source-language="de" product-name="feature-grid">
+        <body>
+            <trans-unit id="title"><source>Vorteile / Features</source></trans-unit>
+            <trans-unit id="description"><source>Raster aus Kacheln mit Icon, Titel und Kurztext – z. B. für Produktvorteile</source></trans-unit>
+            <trans-unit id="kicker.label"><source>Dachzeile</source></trans-unit>
+            <trans-unit id="headline.label"><source>Überschrift</source></trans-unit>
+            <trans-unit id="intro.label"><source>Einleitungstext</source></trans-unit>
+            <trans-unit id="feature_items.label"><source>Kacheln</source></trans-unit>
+            <trans-unit id="feature_items.icon.label"><source>Icon</source></trans-unit>
+            <trans-unit id="feature_items.title.label"><source>Titel</source></trans-unit>
+            <trans-unit id="feature_items.text.label"><source>Kurztext</source></trans-unit>
+        </body>
+    </file>
+</xliff>

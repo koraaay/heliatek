@@ -1,0 +1,61 @@
+# Heliatek Sitepackage – Frontend-Rendering
+page = PAGE
+page {
+    typeNum = 0
+    shortcutIcon = EXT:heliatek_sitepackage/Resources/Public/Icons/favicon.svg
+
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = TEXT
+        templateName.stdWrap.cObject = CASE
+        templateName.stdWrap.cObject {
+            key.data = pagelayout
+            default = TEXT
+            default.value = Default
+            pagets__default = TEXT
+            pagets__default.value = Default
+        }
+        templateRootPaths.10 = EXT:heliatek_sitepackage/Resources/Private/Templates/Page/
+        partialRootPaths.10 = EXT:heliatek_sitepackage/Resources/Private/Partials/
+        layoutRootPaths.10 = EXT:heliatek_sitepackage/Resources/Private/Layouts/
+
+        dataProcessing {
+            10 = menu
+            10 {
+                levels = 2
+                includeSpacer = 1
+                as = mainMenu
+            }
+            20 = menu
+            20 {
+                special = rootline
+                special.range = 0|-1
+                as = breadcrumb
+            }
+        }
+    }
+
+    meta {
+        viewport = width=device-width, initial-scale=1
+    }
+
+    includeCSS {
+        tokens = EXT:heliatek_sitepackage/Resources/Public/Css/tokens.css
+        main = EXT:heliatek_sitepackage/Resources/Public/Css/main.css
+    }
+
+    includeJSFooter {
+        main = EXT:heliatek_sitepackage/Resources/Public/JavaScript/main.js
+        main.defer = 1
+    }
+}
+
+# Inhalt der Hauptspalte (colPos 0)
+lib.content = CONTENT
+lib.content {
+    table = tt_content
+    select {
+        orderBy = sorting
+        where = {#colPos}=0
+    }
+}

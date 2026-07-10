@@ -1,0 +1,17 @@
+<section class="hl-section{f:if(condition: data.dark_background, then: ' hl-section--dark')}">
+    <div class="hl-container">
+        <f:if condition="{data.headline}">
+            <h2>{data.headline}</h2>
+        </f:if>
+        <div class="hl-stats__grid">
+            <f:for each="{data.stat_items}" as="item">
+                <div class="hl-stat">
+                    <div class="hl-stat__value">
+                        <span data-count-to="{item.value -> f:format.raw()}">{item.value}</span><f:if condition="{item.unit}"><span class="hl-stat__unit">{item.unit}</span></f:if>
+                    </div>
+                    <div class="hl-stat__label">{item.label}</div>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</section>

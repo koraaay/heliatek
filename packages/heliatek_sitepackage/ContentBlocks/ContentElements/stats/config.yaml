@@ -1,0 +1,25 @@
+name: heliatek/stats
+title: Zahlen & Fakten
+group: heliatek
+prefixFields: false
+fields:
+  - identifier: headline
+    type: Text
+  - identifier: dark_background
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 1
+  - identifier: stat_items
+    type: Collection
+    labelField: label
+    fields:
+      - identifier: value
+        type: Text
+        required: true
+        description: 'Nur die Zahl, z. B. 6 oder 99,9 – sie wird beim Scrollen animiert hochgezählt'
+      - identifier: unit
+        type: Text
+        description: 'Einheit oder Zusatz hinter der Zahl, z. B. %, g/m² oder +'
+      - identifier: label
+        type: Text
+        required: true

@@ -1,0 +1,20 @@
+<section class="hl-section{f:if(condition: '{data.background} == \'alt\'', then: ' hl-section--alt')}">
+    <div class="hl-container">
+        <div class="hl-textmedia__grid hl-textmedia--media-{data.media_position}">
+            <div class="hl-textmedia__body">
+                <f:if condition="{data.kicker}">
+                    <p class="hl-section__kicker">{data.kicker}</p>
+                </f:if>
+                <h2>{data.headline}</h2>
+                <div class="hl-textmedia__text">
+                    <f:format.html>{data.bodytext}</f:format.html>
+                </div>
+            </div>
+            <div class="hl-textmedia__media">
+                <f:for each="{data.image}" as="image">
+                    <f:image image="{image}" alt="{image.alternative}" loading="lazy" />
+                </f:for>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,20 @@
+<section class="hl-section">
+    <div class="hl-container">
+        <f:if condition="{data.headline}">
+            <h2>{data.headline}</h2>
+        </f:if>
+        <f:if condition="{data.intro}">
+            <p class="hl-section__intro">{data.intro -> f:format.nl2br()}</p>
+        </f:if>
+        <div class="hl-accordion">
+            <f:for each="{data.accordion_items}" as="item">
+                <details class="hl-accordion__item">
+                    <summary class="hl-accordion__question">{item.question}</summary>
+                    <div class="hl-accordion__answer">
+                        <f:format.html>{item.answer}</f:format.html>
+                    </div>
+                </details>
+            </f:for>
+        </div>
+    </div>
+</section>

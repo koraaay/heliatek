@@ -1,0 +1,32 @@
+name: heliatek/card-grid
+title: Karten (Produkte / Lösungen)
+group: heliatek
+prefixFields: false
+fields:
+  - identifier: kicker
+    type: Text
+  - identifier: headline
+    type: Text
+    required: true
+  - identifier: intro
+    type: Textarea
+    rows: 3
+  - identifier: card_items
+    type: Collection
+    labelField: title
+    fields:
+      - identifier: image
+        type: File
+        maxitems: 1
+        allowed: common-image-types
+      - identifier: title
+        type: Text
+        required: true
+      - identifier: text
+        type: Textarea
+        rows: 4
+      - identifier: link
+        type: Link
+      - identifier: link_label
+        type: Text
+        default: 'Mehr erfahren'

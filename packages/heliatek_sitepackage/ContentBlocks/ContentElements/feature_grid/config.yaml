@@ -1,0 +1,27 @@
+name: heliatek/feature-grid
+title: Vorteile / Features
+group: heliatek
+prefixFields: false
+fields:
+  - identifier: kicker
+    type: Text
+  - identifier: headline
+    type: Text
+    required: true
+  - identifier: intro
+    type: Textarea
+    rows: 3
+  - identifier: feature_items
+    type: Collection
+    labelField: title
+    fields:
+      - identifier: icon
+        type: File
+        maxitems: 1
+        allowed: common-image-types
+      - identifier: title
+        type: Text
+        required: true
+      - identifier: text
+        type: Textarea
+        rows: 4

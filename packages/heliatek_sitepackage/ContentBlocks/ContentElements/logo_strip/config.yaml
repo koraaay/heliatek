@@ -1,0 +1,11 @@
+name: heliatek/logo-strip
+title: Logo-Leiste (Partner / Referenzen)
+group: heliatek
+prefixFields: false
+fields:
+  - identifier: headline
+    type: Text
+  - identifier: logos
+    type: File
+    allowed: common-image-types
+    minitems: 1

@@ -1,0 +1,36 @@
+name: heliatek/hero
+title: Hero-Bühne
+group: heliatek
+prefixFields: false
+fields:
+  - identifier: subheadline
+    type: Text
+  - identifier: headline
+    type: Text
+    required: true
+  - identifier: teaser
+    type: Textarea
+    rows: 3
+  - identifier: image
+    type: File
+    maxitems: 1
+    allowed: common-image-types
+  - identifier: hero_buttons
+    type: Collection
+    labelField: label
+    maxitems: 3
+    fields:
+      - identifier: label
+        type: Text
+        required: true
+      - identifier: link
+        type: Link
+      - identifier: style
+        type: Select
+        renderType: selectSingle
+        default: primary
+        items:
+          - label: 'Primär (grün)'
+            value: primary
+          - label: 'Sekundär (Umriss)'
+            value: secondary

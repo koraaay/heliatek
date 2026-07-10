@@ -1,0 +1,21 @@
+name: heliatek/accordion
+title: Akkordeon / FAQ
+group: heliatek
+prefixFields: false
+fields:
+  - identifier: headline
+    type: Text
+  - identifier: intro
+    type: Textarea
+    rows: 3
+  - identifier: accordion_items
+    type: Collection
+    labelField: question
+    fields:
+      - identifier: question
+        type: Text
+        required: true
+      - identifier: answer
+        type: Textarea
+        enableRichtext: true
+        required: true

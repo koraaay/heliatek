@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="plaintext" original="labels.xlf" source-language="de" product-name="card-grid">
+        <body>
+            <trans-unit id="title"><source>Karten (Produkte / Lösungen)</source></trans-unit>
+            <trans-unit id="description"><source>Raster aus Karten mit Bild, Titel, Text und Link – z. B. für HeliaSol/HeliaFilm oder Anwendungsfälle</source></trans-unit>
+            <trans-unit id="kicker.label"><source>Dachzeile</source></trans-unit>
+            <trans-unit id="headline.label"><source>Überschrift</source></trans-unit>
+            <trans-unit id="intro.label"><source>Einleitungstext</source></trans-unit>
+            <trans-unit id="card_items.label"><source>Karten</source></trans-unit>
+            <trans-unit id="card_items.image.label"><source>Bild</source></trans-unit>
+            <trans-unit id="card_items.title.label"><source>Titel</source></trans-unit>
+            <trans-unit id="card_items.text.label"><source>Kurztext</source></trans-unit>
+            <trans-unit id="card_items.link.label"><source>Verlinkung</source></trans-unit>
+            <trans-unit id="card_items.link_label.label"><source>Link-Beschriftung</source></trans-unit>
+        </body>
+    </file>
+</xliff>

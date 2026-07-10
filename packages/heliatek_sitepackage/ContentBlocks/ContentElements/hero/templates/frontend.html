@@ -1,0 +1,27 @@
+<section class="hl-hero">
+    <f:if condition="{data.image}">
+        <div class="hl-hero__media">
+            <f:for each="{data.image}" as="image">
+                <f:image image="{image}" alt="{image.alternative}" loading="eager" />
+            </f:for>
+        </div>
+    </f:if>
+    <div class="hl-container">
+        <div class="hl-hero__content">
+            <f:if condition="{data.subheadline}">
+                <p class="hl-hero__subheadline">{data.subheadline}</p>
+            </f:if>
+            <h1 class="hl-hero__headline">{data.headline}</h1>
+            <f:if condition="{data.teaser}">
+                <p class="hl-hero__text">{data.teaser -> f:format.nl2br()}</p>
+            </f:if>
+            <f:if condition="{data.hero_buttons}">
+                <div class="hl-btn-group">
+                    <f:for each="{data.hero_buttons}" as="button">
+                        <f:link.typolink parameter="{button.link}" class="hl-btn hl-btn--{button.style}">{button.label}</f:link.typolink>
+                    </f:for>
+                </div>
+            </f:if>
+        </div>
+    </div>
+</section>

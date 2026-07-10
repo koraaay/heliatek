@@ -1,0 +1,4 @@
+name: heliatek/sitepackage
+label: Heliatek Sitepackage
+dependencies:
+  - typo3/fluid-styled-content

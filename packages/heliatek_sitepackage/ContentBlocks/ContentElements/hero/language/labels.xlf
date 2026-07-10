@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="plaintext" original="labels.xlf" source-language="de" product-name="hero">
+        <body>
+            <trans-unit id="title"><source>Hero-Bühne</source></trans-unit>
+            <trans-unit id="description"><source>Großflächige Einstiegssektion mit Überschrift, Hintergrundbild und Buttons</source></trans-unit>
+            <trans-unit id="subheadline.label"><source>Dachzeile (klein, über der Überschrift)</source></trans-unit>
+            <trans-unit id="headline.label"><source>Überschrift</source></trans-unit>
+            <trans-unit id="teaser.label"><source>Einleitungstext</source></trans-unit>
+            <trans-unit id="image.label"><source>Hintergrundbild</source></trans-unit>
+            <trans-unit id="hero_buttons.label"><source>Buttons</source></trans-unit>
+            <trans-unit id="hero_buttons.label.label"><source>Beschriftung</source></trans-unit>
+            <trans-unit id="hero_buttons.link.label"><source>Verlinkung</source></trans-unit>
+            <trans-unit id="hero_buttons.style.label"><source>Darstellung</source></trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="plaintext" original="labels.xlf" source-language="de" product-name="accordion">
+        <body>
+            <trans-unit id="title"><source>Akkordeon / FAQ</source></trans-unit>
+            <trans-unit id="description"><source>Auf- und zuklappbare Frage-Antwort-Liste</source></trans-unit>
+            <trans-unit id="headline.label"><source>Überschrift (optional)</source></trans-unit>
+            <trans-unit id="intro.label"><source>Einleitungstext</source></trans-unit>
+            <trans-unit id="accordion_items.label"><source>Einträge</source></trans-unit>
+            <trans-unit id="accordion_items.question.label"><source>Frage / Titel</source></trans-unit>
+            <trans-unit id="accordion_items.answer.label"><source>Antwort / Inhalt</source></trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,16 @@
+{
+    "name": "heliatek/sitepackage",
+    "description": "Heliatek Sitepackage – Design-System-Tokens, Seitentemplates und editierbare Sektions-Komponenten (Content Blocks)",
+    "license": "GPL-2.0-or-later",
+    "type": "typo3-cms-extension",
+    "require": {
+        "friendsoftypo3/content-blocks": "^1.1",
+        "typo3/cms-core": "^13.4",
+        "typo3/cms-fluid-styled-content": "^13.4"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "heliatek_sitepackage"
+        }
+    }
+}

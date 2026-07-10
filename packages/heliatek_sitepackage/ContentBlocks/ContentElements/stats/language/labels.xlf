@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="plaintext" original="labels.xlf" source-language="de" product-name="stats">
+        <body>
+            <trans-unit id="title"><source>Zahlen &amp; Fakten</source></trans-unit>
+            <trans-unit id="description"><source>Kennzahlen-Leiste mit animiert hochzählenden Werten</source></trans-unit>
+            <trans-unit id="headline.label"><source>Überschrift (optional)</source></trans-unit>
+            <trans-unit id="dark_background.label"><source>Dunkler Hintergrund</source></trans-unit>
+            <trans-unit id="stat_items.label"><source>Kennzahlen</source></trans-unit>
+            <trans-unit id="stat_items.value.label"><source>Zahl</source></trans-unit>
+            <trans-unit id="stat_items.unit.label"><source>Einheit / Zusatz</source></trans-unit>
+            <trans-unit id="stat_items.label.label"><source>Beschriftung</source></trans-unit>
+        </body>
+    </file>
+</xliff>

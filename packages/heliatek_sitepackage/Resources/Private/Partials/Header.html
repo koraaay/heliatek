@@ -1,0 +1,31 @@
+<header class="hl-header">
+    <div class="hl-container hl-header__inner">
+        <f:link.page pageUid="{site.rootPageId}" class="hl-header__brand" title="Zur Startseite">
+            <span class="hl-header__logo">Heliatek</span>
+        </f:link.page>
+        <button class="hl-header__toggle" type="button" aria-expanded="false" aria-controls="mainnav" data-nav-toggle>
+            <span class="hl-header__toggle-bar"></span>
+            <span class="hl-header__toggle-bar"></span>
+            <span class="hl-header__toggle-bar"></span>
+            <span class="visually-hidden">Menü öffnen</span>
+        </button>
+        <nav id="mainnav" class="hl-nav" aria-label="Hauptnavigation">
+            <ul class="hl-nav__list">
+                <f:for each="{mainMenu}" as="item">
+                    <li class="hl-nav__item{f:if(condition: item.active, then: ' hl-nav__item--active')}">
+                        <a href="{item.link}" class="hl-nav__link"{f:if(condition: item.current, then: ' aria-current="page"')}>{item.title}</a>
+                        <f:if condition="{item.children}">
+                            <ul class="hl-nav__sublist">
+                                <f:for each="{item.children}" as="child">
+                                    <li class="hl-nav__subitem">
+                                        <a href="{child.link}" class="hl-nav__sublink">{child.title}</a>
+                                    </li>
+                                </f:for>
+                            </ul>
+                        </f:if>
+                    </li>
+                </f:for>
+            </ul>
+        </nav>
+    </div>
+</header>

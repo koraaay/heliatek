@@ -1,0 +1,29 @@
+# Backend-Layout: eine Inhaltsspalte, in der die Sektions-Komponenten
+# untereinander gestapelt werden (Reihenfolge = Reihenfolge auf der Website)
+mod.web_layout.BackendLayouts {
+    default {
+        title = Standardseite
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Seiteninhalt (Sektionen)
+                                colPos = 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+# Eigene Gruppe "Heliatek" im Dialog "Neues Inhaltselement"
+mod.wizards.newContentElement.wizardItems.heliatek {
+    header = Heliatek Sektionen
+    before = common
+}

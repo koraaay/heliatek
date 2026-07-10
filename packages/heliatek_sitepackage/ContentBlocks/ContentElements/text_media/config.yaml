@@ -1,0 +1,35 @@
+name: heliatek/text-media
+title: Text & Bild
+group: heliatek
+prefixFields: false
+fields:
+  - identifier: kicker
+    type: Text
+  - identifier: headline
+    type: Text
+    required: true
+  - identifier: bodytext
+    type: Textarea
+    enableRichtext: true
+  - identifier: image
+    type: File
+    maxitems: 1
+    allowed: common-image-types
+  - identifier: media_position
+    type: Select
+    renderType: selectSingle
+    default: right
+    items:
+      - label: 'Bild rechts'
+        value: right
+      - label: 'Bild links'
+        value: left
+  - identifier: background
+    type: Select
+    renderType: selectSingle
+    default: default
+    items:
+      - label: 'Weiß'
+        value: default
+      - label: 'Hellgrau'
+        value: alt

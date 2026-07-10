@@ -1,0 +1,12 @@
+<section class="hl-section hl-section--alt hl-logos">
+    <div class="hl-container">
+        <f:if condition="{data.headline}">
+            <p class="hl-section__kicker" style="text-align:center">{data.headline}</p>
+        </f:if>
+        <div class="hl-logos__grid">
+            <f:for each="{data.logos}" as="logo">
+                <f:image image="{logo}" alt="{logo.alternative}" loading="lazy" />
+            </f:for>
+        </div>
+    </div>
+</section>

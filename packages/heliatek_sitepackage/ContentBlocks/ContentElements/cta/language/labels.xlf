@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="plaintext" original="labels.xlf" source-language="de" product-name="cta">
+        <body>
+            <trans-unit id="title"><source>Call-to-Action</source></trans-unit>
+            <trans-unit id="description"><source>Dunkles Banner mit Überschrift, Text und bis zu zwei Buttons</source></trans-unit>
+            <trans-unit id="headline.label"><source>Überschrift</source></trans-unit>
+            <trans-unit id="text.label"><source>Text</source></trans-unit>
+            <trans-unit id="cta_buttons.label"><source>Buttons</source></trans-unit>
+            <trans-unit id="cta_buttons.label.label"><source>Beschriftung</source></trans-unit>
+            <trans-unit id="cta_buttons.link.label"><source>Verlinkung</source></trans-unit>
+            <trans-unit id="cta_buttons.style.label"><source>Darstellung</source></trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,26 @@
+<section class="hl-section hl-section--alt">
+    <div class="hl-container">
+        <f:if condition="{data.kicker}">
+            <p class="hl-section__kicker">{data.kicker}</p>
+        </f:if>
+        <h2>{data.headline}</h2>
+        <f:if condition="{data.intro}">
+            <p class="hl-section__intro">{data.intro -> f:format.nl2br()}</p>
+        </f:if>
+        <div class="hl-features__grid">
+            <f:for each="{data.feature_items}" as="item">
+                <div class="hl-feature">
+                    <f:if condition="{item.icon}">
+                        <div class="hl-feature__icon">
+                            <f:for each="{item.icon}" as="icon">
+                                <f:image image="{icon}" alt="" loading="lazy" />
+                            </f:for>
+                        </div>
+                    </f:if>
+                    <h3 class="hl-feature__title">{item.title}</h3>
+                    <p class="hl-feature__text">{item.text -> f:format.nl2br()}</p>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</section>
