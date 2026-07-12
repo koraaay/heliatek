@@ -1,0 +1,6 @@
+<div>
+    <f:if condition="{data.kicker}"><small>{data.kicker}</small><br /></f:if>
+    <strong>{data.headline}</strong>
+    <p>{data.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 120)}</p>
+    <p><em>Bild: {f:if(condition: data.media_position == 'left', then: 'links', else: 'rechts')}</em></p>
+</div>

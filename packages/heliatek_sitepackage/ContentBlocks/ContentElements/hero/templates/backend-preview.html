@@ -1,0 +1,6 @@
+<div>
+    <f:if condition="{data.subheadline}"><small>{data.subheadline}</small><br /></f:if>
+    <strong>{data.headline}</strong>
+    <f:if condition="{data.teaser}"><p>{data.teaser -> f:format.crop(maxCharacters: 120)}</p></f:if>
+    <f:if condition="{data.hero_buttons}"><p><em>{data.hero_buttons -> f:count()} Button(s)</em></p></f:if>
+</div>

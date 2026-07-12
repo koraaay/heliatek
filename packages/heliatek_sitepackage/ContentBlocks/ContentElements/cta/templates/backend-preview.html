@@ -1,0 +1,5 @@
+<div>
+    <strong>{data.headline}</strong>
+    <f:if condition="{data.text}"><p>{data.text -> f:format.crop(maxCharacters: 100)}</p></f:if>
+    <f:if condition="{data.cta_buttons}"><p><em>{data.cta_buttons -> f:count()} Button(s)</em></p></f:if>
+</div>

@@ -48,20 +48,33 @@ werden Source Serif 4 + Inter per Google-Fonts-Import geladen. Vor dem
 Livegang die echten Fonts als lokale `@font-face`-Regeln einbinden
 (DSGVO: kein Remote-Google-Fonts-Load in Deutschland!).
 
-## Installation (lokal, z. B. mit DDEV)
+## Installation (lokal mit DDEV)
+
+DDEV-Konfiguration liegt bei (`.ddev/config.yaml` – PHP 8.3, MariaDB 10.11):
 
 ```bash
-composer install
-# TYPO3 einrichten (Datenbank, Admin-User):
-vendor/bin/typo3 setup
+ddev start
+ddev composer install
+ddev exec vendor/bin/typo3 setup       # Datenbank + Admin-User anlegen
+ddev launch /typo3                     # Backend öffnen
 ```
+
+Ohne DDEV genügt `composer install` und `vendor/bin/typo3 setup`.
 
 Danach im Backend:
 
-1. **Site Management → Sites**: der Site das Set **„Heliatek Sitepackage"**
-   zuweisen (Tab *Sets*). Damit sind TypoScript, Backend-Layout und alle
-   Komponenten aktiv – es muss kein TypoScript von Hand eingebunden werden.
-2. Seite anlegen, als Backend-Layout **„Standardseite"** wählen.
+1. **Root-Seite anlegen** (erste Seite im Seitenbaum, UID 1) und als
+   Backend-Layout **„Standardseite"** wählen.
+2. Die **Site-Konfiguration liegt bereits bei** (`config/sites/heliatek/`):
+   Deutsch als Standardsprache, Englisch unter `/en/` (DE|EN wie im
+   Design-System) und das Set „Heliatek Sitepackage" ist als Abhängigkeit
+   eingetragen – TypoScript, Backend-Layout und alle Komponenten sind damit
+   sofort aktiv.
+3. **Assets übernehmen:** Bilder aus dem Claude-Design-Projekt „Heliatek"
+   (USP-Icons `assets/USP-Icon-*.png`, Referenzfotos, Schichtaufbau,
+   HeliaSol-v2-Konzeptbild) herunterladen und in **Dateiliste →
+   fileadmin/** hochladen, damit Redakteure sie in den Komponenten
+   auswählen können.
 
 Nach Änderungen an einer `config.yaml` einmal ausführen:
 

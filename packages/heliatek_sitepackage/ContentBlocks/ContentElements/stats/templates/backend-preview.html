@@ -1,0 +1,7 @@
+<div>
+    <f:if condition="{data.headline}"><strong>{data.headline}</strong></f:if>
+    <p>
+        <f:for each="{data.stat_items}" as="item" iteration="i">{item.value}{item.unit} {item.label}<f:if condition="!{i.isLast}"> · </f:if></f:for>
+    </p>
+    <p><em>{f:if(condition: data.dark_background, then: 'Dunkle Variante', else: 'Mint-Band')}</em></p>
+</div>

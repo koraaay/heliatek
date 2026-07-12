@@ -1,0 +1,29 @@
+# Site-Konfiguration Heliatek
+# Voraussetzung: Root-Seite mit UID 1 im Seitenbaum (siehe README)
+base: '/'
+rootPageId: 1
+websiteTitle: Heliatek
+dependencies:
+  - heliatek/sitepackage
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: 0
+    base: /
+    locale: de_DE.UTF-8
+    navigationTitle: DE
+    flag: de
+    websiteTitle: ''
+  -
+    title: English
+    enabled: true
+    languageId: 1
+    base: /en/
+    locale: en_US.UTF-8
+    navigationTitle: EN
+    flag: gb
+    fallbackType: strict
+    websiteTitle: ''
+errorHandling: {}
+routes: {}
