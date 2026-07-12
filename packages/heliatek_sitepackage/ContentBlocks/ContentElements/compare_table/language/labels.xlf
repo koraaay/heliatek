@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="plaintext" original="labels.xlf" source-language="de" product-name="compare-table">
+        <body>
+            <trans-unit id="title"><source>Vergleichstabelle</source></trans-unit>
+            <trans-unit id="description"><source>Dreispaltige Tabelle: Merkmal, Produkt A, Produkt B (z. B. HeliaSol vs. HeliaSol v2)</source></trans-unit>
+            <trans-unit id="kicker.label"><source>Dachzeile</source></trans-unit>
+            <trans-unit id="headline.label"><source>Überschrift</source></trans-unit>
+            <trans-unit id="feature_label.label"><source>Spaltentitel links</source></trans-unit>
+            <trans-unit id="col_a_label.label"><source>Spaltentitel Produkt A</source></trans-unit>
+            <trans-unit id="col_b_label.label"><source>Spaltentitel Produkt B</source></trans-unit>
+            <trans-unit id="table_rows.label"><source>Zeilen</source></trans-unit>
+            <trans-unit id="table_rows.feature.label"><source>Merkmal</source></trans-unit>
+            <trans-unit id="table_rows.value_a.label"><source>Wert Produkt A</source></trans-unit>
+            <trans-unit id="table_rows.value_b.label"><source>Wert Produkt B (wird fett dargestellt)</source></trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,31 @@
+name: heliatek/compare-table
+title: Vergleichstabelle
+group: heliatek
+prefixFields: false
+fields:
+  - identifier: kicker
+    type: Text
+    default: 'Im Vergleich'
+  - identifier: headline
+    type: Text
+    required: true
+  - identifier: feature_label
+    type: Text
+    default: 'Merkmal'
+  - identifier: col_a_label
+    type: Text
+    required: true
+  - identifier: col_b_label
+    type: Text
+    required: true
+  - identifier: table_rows
+    type: Collection
+    labelField: feature
+    fields:
+      - identifier: feature
+        type: Text
+        required: true
+      - identifier: value_a
+        type: Text
+      - identifier: value_b
+        type: Text

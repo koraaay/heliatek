@@ -1,0 +1,9 @@
+<div>
+    <strong>{data.headline}</strong>
+    <ul>
+        <f:for each="{data.compare_cards}" as="card">
+            <li>{card.card_title}</li>
+        </f:for>
+    </ul>
+    <f:if condition="{data.compare_bars}"><p><em>{data.compare_bars -> f:count()} Vergleichsbalken</em></p></f:if>
+</div>

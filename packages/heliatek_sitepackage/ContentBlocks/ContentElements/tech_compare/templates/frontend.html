@@ -1,0 +1,39 @@
+<section class="hl-section">
+    <div class="hl-container">
+        <f:if condition="{data.kicker}">
+            <p class="hl-section__kicker">{data.kicker}</p>
+        </f:if>
+        <h2>{data.headline}</h2>
+        <f:if condition="{data.compare_cards}">
+            <div class="hl-compare__cards">
+                <f:for each="{data.compare_cards}" as="card">
+                    <div class="hl-compare__card{f:if(condition: card.highlight, then: ' hl-compare__card--highlight')}">
+                        <div class="hl-compare__cardhead">
+                            <span class="hl-compare__marker" style="background:{card.marker_color}"></span>
+                            <span class="hl-compare__cardtitle">{card.card_title}</span>
+                        </div>
+                        <p class="hl-compare__cardtext">{card.card_text -> f:format.nl2br()}</p>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+        <f:if condition="{data.compare_bars}">
+            <div class="hl-compare__bars">
+                <f:if condition="{data.bars_label}">
+                    <p class="hl-compare__barslabel">{data.bars_label}</p>
+                </f:if>
+                <f:for each="{data.compare_bars}" as="bar">
+                    <div class="hl-comparebar{f:if(condition: bar.emphasized, then: ' hl-comparebar--emphasized')}">
+                        <div class="hl-comparebar__head">
+                            <span>{bar.label}</span>
+                            <f:if condition="{bar.bar_value}"><span>{bar.bar_value}</span></f:if>
+                        </div>
+                        <div class="hl-comparebar__track">
+                            <div class="hl-comparebar__fill" data-bar-percent="{bar.percent}" style="background:{bar.bar_color}"></div>
+                        </div>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+    </div>
+</section>

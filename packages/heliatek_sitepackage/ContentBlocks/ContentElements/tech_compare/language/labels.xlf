@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="plaintext" original="labels.xlf" source-language="de" product-name="tech-compare">
+        <body>
+            <trans-unit id="title"><source>Technologie-Vergleich</source></trans-unit>
+            <trans-unit id="description"><source>Bisher/Jetzt-Karten mit Farbmarkern plus animierte Vergleichsbalken (z. B. OPV vs. Perowskit)</source></trans-unit>
+            <trans-unit id="kicker.label"><source>Dachzeile</source></trans-unit>
+            <trans-unit id="headline.label"><source>Überschrift</source></trans-unit>
+            <trans-unit id="compare_cards.label"><source>Vergleichs-Karten</source></trans-unit>
+            <trans-unit id="compare_cards.card_title.label"><source>Titel (z. B. „Bisher – HeliaSol (OPV)")</source></trans-unit>
+            <trans-unit id="compare_cards.card_text.label"><source>Beschreibung</source></trans-unit>
+            <trans-unit id="compare_cards.marker_color.label"><source>Farbmarker (OPV: #8b5fbf, Perowskit: #8a8d88)</source></trans-unit>
+            <trans-unit id="compare_cards.highlight.label"><source>Hervorheben (dunkle Kontur, heller Grund)</source></trans-unit>
+            <trans-unit id="bars_label.label"><source>Beschriftung der Vergleichsbalken</source></trans-unit>
+            <trans-unit id="compare_bars.label"><source>Vergleichsbalken</source></trans-unit>
+            <trans-unit id="compare_bars.label.label"><source>Beschriftung</source></trans-unit>
+            <trans-unit id="compare_bars.bar_value.label"><source>Wert (optional, z. B. ~2×)</source></trans-unit>
+            <trans-unit id="compare_bars.percent.label"><source>Balkenlänge in Prozent (0–100)</source></trans-unit>
+            <trans-unit id="compare_bars.bar_color.label"><source>Balkenfarbe</source></trans-unit>
+            <trans-unit id="compare_bars.emphasized.label"><source>Betonen (fett)</source></trans-unit>
+        </body>
+    </file>
+</xliff>

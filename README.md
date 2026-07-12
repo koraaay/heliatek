@@ -20,7 +20,10 @@ packages/heliatek_sitepackage/         Sitepackage-Extension
 │   ├── quote/                         Zitat / Referenzstimme
 │   ├── accordion/                     Akkordeon / FAQ
 │   ├── logo_strip/                    Partner-/Referenzlogos
-│   └── cta/                           Call-to-Action-Banner
+│   ├── cta/                           Call-to-Action-Banner (Mint)
+│   ├── tech_compare/                  Bisher/Jetzt-Karten + Vergleichsbalken
+│   ├── compare_table/                 Vergleichstabelle (Produkt A vs. B)
+│   └── image/                         Bild mit Kennzeichnungs-Badge
 └── Resources/
     ├── Private/                       Seitentemplate, Header, Footer (Fluid)
     └── Public/Css/tokens.css          ⭐ Design-Tokens (zentrale Stellschrauben)

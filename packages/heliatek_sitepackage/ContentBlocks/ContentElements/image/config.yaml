@@ -1,0 +1,24 @@
+name: heliatek/image
+title: Bild (mit Kennzeichnung)
+group: heliatek
+prefixFields: false
+fields:
+  - identifier: image
+    type: File
+    maxitems: 1
+    minitems: 1
+    allowed: common-image-types
+  - identifier: annotation
+    type: Text
+    description: 'Kennzeichnung unten rechts im Bild, z. B. "Konzeptbild — echtes Produktfoto folgt". Vorläufiges Material immer kennzeichnen!'
+  - identifier: aspect
+    type: Select
+    renderType: selectSingle
+    default: '16/9'
+    items:
+      - label: 'Breit (16:9)'
+        value: '16/9'
+      - label: 'Panorama (21:9)'
+        value: '21/9'
+      - label: 'Originalformat'
+        value: 'auto'

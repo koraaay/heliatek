@@ -8,6 +8,9 @@
     </f:if>
     <div class="hl-container">
         <div class="hl-hero__content">
+            <f:if condition="{data.badge}">
+                <p class="hl-hero__badge">{data.badge}</p>
+            </f:if>
             <f:if condition="{data.subheadline}">
                 <p class="hl-hero__subheadline">{data.subheadline}</p>
             </f:if>

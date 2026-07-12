@@ -3,6 +3,9 @@ title: Hero-Bühne
 group: heliatek
 prefixFields: false
 fields:
+  - identifier: badge
+    type: Text
+    description: 'Optionaler Badge mit Mint-Kontur über der Überschrift, z. B. "Neu · Arbeitstitel HeliaSol v2"'
   - identifier: subheadline
     type: Text
   - identifier: headline
