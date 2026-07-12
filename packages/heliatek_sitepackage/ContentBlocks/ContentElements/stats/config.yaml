@@ -8,7 +8,8 @@ fields:
   - identifier: dark_background
     type: Checkbox
     renderType: checkboxToggle
-    default: 1
+    default: 0
+    description: 'Standard ist das Mint-Band; aktivieren für die dunkle Tech-Variante'
   - identifier: stat_items
     type: Collection
     labelField: label

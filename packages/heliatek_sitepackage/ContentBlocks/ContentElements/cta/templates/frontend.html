@@ -1,15 +1,19 @@
-<section class="hl-section hl-section--dark hl-cta">
+<section class="hl-section hl-section--mint hl-cta">
     <div class="hl-container">
-        <h2>{data.headline}</h2>
-        <f:if condition="{data.text}">
-            <p class="hl-cta__text">{data.text -> f:format.nl2br()}</p>
-        </f:if>
-        <f:if condition="{data.cta_buttons}">
-            <div class="hl-btn-group">
-                <f:for each="{data.cta_buttons}" as="button">
-                    <f:link.typolink parameter="{button.link}" class="hl-btn hl-btn--{button.style}">{button.label}</f:link.typolink>
-                </f:for>
+        <div class="hl-cta__inner">
+            <div>
+                <h2 class="hl-cta__headline">{data.headline}</h2>
+                <f:if condition="{data.text}">
+                    <p class="hl-cta__text">{data.text -> f:format.nl2br()}</p>
+                </f:if>
             </div>
-        </f:if>
+            <f:if condition="{data.cta_buttons}">
+                <div class="hl-btn-group">
+                    <f:for each="{data.cta_buttons}" as="button">
+                        <f:link.typolink parameter="{button.link}" class="hl-btn hl-btn--{button.style}">{button.label}</f:link.typolink>
+                    </f:for>
+                </div>
+            </f:if>
+        </div>
     </div>
 </section>

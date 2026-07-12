@@ -1,4 +1,4 @@
-/* Heliatek Frontend-Verhalten: Navigation + animierte Zahlen */
+/* Heliatek Frontend-Verhalten: Navigation, animierte Zahlen, Scroll-Reveals */
 (function () {
     'use strict';
 
@@ -48,6 +48,24 @@
 
         counters.forEach(function (el) {
             observer.observe(el);
+        });
+    }
+
+    // Dezente Scroll-Reveals (translateY + fade), respektiert reduced motion
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        var sections = document.querySelectorAll('.hl-main > section, .hl-main .hl-section');
+        var revealObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(function (el) {
+            el.classList.add('hl-reveal');
+            revealObserver.observe(el);
         });
     }
 })();

@@ -26,14 +26,27 @@ packages/heliatek_sitepackage/         Sitepackage-Extension
     └── Public/Css/tokens.css          ⭐ Design-Tokens (zentrale Stellschrauben)
 ```
 
-## Design-System anpassen
+## Design-System
 
-Alle Farben, Schriften, Abstände und Radien liegen als CSS-Custom-Properties in
-`packages/heliatek_sitepackage/Resources/Public/Css/tokens.css`. Die Werte sind
-an den Heliatek-Markenauftritt angelehnt (Petrol + Heliatek-Grün) und können
-1:1 gegen die Tokens aus dem eigenen Design-System (z. B. Figma-Variablen)
-getauscht werden – **alle Komponenten ziehen sich ihr Styling ausschließlich
-aus dieser Datei**.
+Die Tokens stammen 1:1 aus dem Claude-Design-Projekt **„Heliatek"**
+(`tokens/colors.css`, `typography.css`, `spacing.css`, `effects.css`) und
+liegen gebündelt in
+`packages/heliatek_sitepackage/Resources/Public/Css/tokens.css` –
+**alle Komponenten ziehen sich ihr Styling ausschließlich aus dieser Datei**.
+
+Markenregeln (aus dem Design-System-readme):
+
+- **Mint `#94E8B5`** als einziger Akzent (CTAs, Kennzahl-Band, Footer-Fläche);
+  Mint großflächig nur als Seitenabschluss.
+- Serif-Headlines (Source Serif 4), Sans für UI/Fließtext (Inter).
+- **Scharfe Kanten** (`border-radius: 0`), Kreise nur für Icons/Porträts.
+- 1px-Hairlines statt Schatten; Buttons rechteckig mit Pfeil **→**.
+- Keine Emoji, keine Icon-Fonts; USP-Icons als PNG-Assets.
+
+**FLAG Font-Substitution:** Die Original-Webfonts lagen nicht vor; aktuell
+werden Source Serif 4 + Inter per Google-Fonts-Import geladen. Vor dem
+Livegang die echten Fonts als lokale `@font-face`-Regeln einbinden
+(DSGVO: kein Remote-Google-Fonts-Load in Deutschland!).
 
 ## Installation (lokal, z. B. mit DDEV)
 
@@ -80,8 +93,10 @@ ebenfalls sortiert werden.
 
 ## Offene Punkte
 
-- Die Design-Tokens in `tokens.css` sind Näherungswerte an die Heliatek-Marke.
-  Sobald die Original-Tokens aus dem Design-System (Figma) vorliegen, dort
-  ersetzen.
-- Logo im Header/Footer ist aktuell eine Wortmarke; SVG-Logo unter
-  `Resources/Public/Icons/` ablegen und in den Partials einbinden.
+- Original-Webfonts nachliefern und Google-Fonts-Import in `tokens.css`
+  durch lokale `@font-face`-Regeln ersetzen (DSGVO).
+- Bild-Assets aus dem Design-System (USP-Icons, Referenzfotos,
+  HeliaSol-v2-Konzeptbild) in die TYPO3-Dateiliste hochladen, damit
+  Redakteure sie in den Komponenten auswählen können.
+- Footer-Links (Impressum, Datenschutz, AGB) auf echte Seiten verlinken,
+  sobald diese im Seitenbaum existieren.

@@ -1,54 +1,114 @@
 /* =========================================================
    Heliatek Design-Tokens
    ---------------------------------------------------------
-   Zentrale Stellschrauben des Design-Systems.
-   Werte hier gegen die Tokens aus dem eigenen Design-System
-   (Figma) tauschen – alle Komponenten ziehen sich ihre Farben,
-   Abstände und Schriften ausschließlich aus dieser Datei.
-   ========================================================= */
-:root {
-    /* Farben – Marke */
-    --hl-color-brand-dark: #00333b;   /* dunkles Petrol, Flächen/Footer */
-    --hl-color-brand: #00666f;        /* Primärfarbe */
-    --hl-color-brand-light: #e5f2f3;  /* helle Flächen, Hintergründe */
-    --hl-color-accent: #a4c625;       /* Heliatek-Grün, CTAs/Akzente */
-    --hl-color-accent-dark: #7d9a15;  /* Hover-Zustand Akzent */
+   Quelle: Claude-Design-Projekt "Heliatek"
+   (tokens/colors.css, typography.css, spacing.css, effects.css)
+   Diese Datei ist die einzige Stellschraube des Design-Systems –
+   alle Komponenten ziehen Farben, Schrift und Abstände von hier.
 
-    /* Farben – Neutral */
-    --hl-color-text: #1d2b2e;
-    --hl-color-text-muted: #5a6b6e;
-    --hl-color-text-inverse: #ffffff;
-    --hl-color-surface: #ffffff;
-    --hl-color-surface-alt: #f4f7f7;
-    --hl-color-border: #d8e2e3;
+   FLAG Font-Substitution (siehe Design-System-readme):
+   Original-Webfonts lagen nicht vor. Substitute: Source Serif 4
+   (Serif-Headlines) und Inter (Sans). Sobald echte Font-Dateien
+   vorliegen, den Import durch lokale @font-face-Regeln ersetzen
+   (DSGVO: Google-Fonts-Import vor Livegang lokal hosten!).
+   ========================================================= */
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+    /* Base */
+    --hel-mint: #94e8b5;          /* Primäraccent: CTAs, Footer, Kennzahl-Kacheln */
+    --hel-ink: #111111;           /* Text, Headlines, Icons, Linien */
+    --hel-white: #ffffff;
+    --hel-paper: #f5f6f4;         /* Seitenhintergrund hell */
+    --hel-dark: #111214;          /* Dunkle Hero-/Tech-Sektionen (v2) */
+    --hel-indigo: #5b47a8;        /* Nur im Logo-Mark */
+
+    /* Grautöne */
+    --hel-grey-700: #3a3a3a;      /* Sekundärtext */
+    --hel-grey-500: #6b6b6b;      /* Meta, Labels */
+    --hel-grey-300: #c9c9c9;
+    --hel-line: #d8dad4;          /* Hairlines auf hell */
+    --hel-line-strong: #111111;   /* Betonte Konturen (Topbar, Tabellenkopf) */
+    --hel-track: #e7e9e4;         /* Balken-Tracks, leere Zustände */
+    --hel-surface-alt: #e9eae6;
+
+    /* Dunkle Flächen */
+    --hel-dark-text: #cfd2ce;     /* Fließtext auf dunkel */
+    --hel-dark-track: #26282a;
+
+    /* Technologie-Kennfarben */
+    --hel-opv: #8b5fbf;           /* Bisher: organische Folie (violett) */
+    --hel-pero: #8a8d88;          /* Neu: Perowskit (grau) */
+    --hel-pero-grad: linear-gradient(110deg, #71767e 30%, #d6dae0 50%, #71767e 70%);
+
+    /* Icon-Verlauf (USP-Icons) */
+    --hel-icon-grad: linear-gradient(135deg, #8fe89f, #e8e08f);
+
+    /* Semantische Aliase */
+    --surface-page: var(--hel-paper);
+    --surface-card: var(--hel-white);
+    --surface-accent: var(--hel-mint);
+    --surface-dark: var(--hel-dark);
+    --text-body: var(--hel-ink);
+    --text-secondary: var(--hel-grey-700);
+    --text-meta: var(--hel-grey-500);
+    --text-on-dark: var(--hel-dark-text);
+    --border-hairline: var(--hel-line);
+    --border-strong: var(--hel-line-strong);
 
     /* Typografie */
-    --hl-font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-    --hl-font-size-base: 1rem;        /* 16px */
-    --hl-font-size-sm: 0.875rem;
-    --hl-font-size-lg: 1.125rem;
-    --hl-font-size-h1: clamp(2rem, 5vw, 3.25rem);
-    --hl-font-size-h2: clamp(1.6rem, 3.5vw, 2.375rem);
-    --hl-font-size-h3: 1.375rem;
-    --hl-line-height: 1.6;
-    --hl-line-height-heading: 1.15;
-    --hl-font-weight-bold: 700;
+    --font-serif: "Source Serif 4", Georgia, serif;
+    --font-sans: "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", Menlo, monospace;
 
-    /* Abstände */
-    --hl-space-xs: 0.5rem;
-    --hl-space-sm: 1rem;
-    --hl-space-md: 1.5rem;
-    --hl-space-lg: 2.5rem;
-    --hl-space-xl: 4rem;
-    --hl-section-padding: clamp(3rem, 8vw, 6rem);
+    /* Skala (Desktop 1440) */
+    --text-hero: 400 84px/1.04 var(--font-serif);
+    --text-display: 400 64px/1.08 var(--font-serif);
+    --text-h1: 400 48px/1.15 var(--font-serif);
+    --text-h2: 400 34px/1.2 var(--font-serif);
+    --text-h3: 700 22px/1.3 var(--font-sans);
+    --text-body-lg: 400 19px/1.65 var(--font-sans);
+    --text-body-md: 400 17px/1.65 var(--font-sans);
+    --text-body-sm: 400 15px/1.6 var(--font-sans);
+    --text-meta-size: 400 13px/1.5 var(--font-sans);
+    --text-eyebrow: 400 12px/1.4 var(--font-sans);
+    --text-stat: 700 44px/1.1 var(--font-sans);
+    --text-button: 600 17px/1 var(--font-sans);
+    --tracking-eyebrow: 0.08em;
+
+    /* Spacing-Skala */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
+    --space-9: 96px;
+    --space-10: 120px;
 
     /* Layout */
-    --hl-container-max: 75rem;        /* 1200px */
-    --hl-container-pad: 1.25rem;
-    --hl-radius: 0.75rem;
-    --hl-radius-pill: 999px;
-    --hl-shadow: 0 8px 24px rgba(0, 51, 59, 0.10);
+    --content-max: 1200px;
+    --page-pad-x: 48px;
+    --section-pad-y: var(--space-10);
 
-    /* Übergänge */
-    --hl-transition: 180ms ease;
+    /* Buttons */
+    --button-pad: 20px 28px;
+
+    /* Ecken – Marke ist scharfkantig, Radius NUR für Kreise */
+    --radius-none: 0;
+    --radius-full: 50%;
+
+    /* Borders */
+    --border-1: 1px solid var(--hel-line);
+    --border-strong-1: 1px solid var(--hel-ink);
+
+    /* Schatten – sehr sparsam, nur schwebende Elemente */
+    --shadow-float: 0 6px 24px rgba(0, 0, 0, 0.2);
+
+    /* Motion */
+    --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+    --duration-reveal: 1s;
+    --duration-hover: 0.2s;
 }
