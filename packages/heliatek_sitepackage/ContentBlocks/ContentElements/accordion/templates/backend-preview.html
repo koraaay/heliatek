@@ -1,0 +1,8 @@
+<div>
+    <f:if condition="{data.headline}"><strong>{data.headline}</strong></f:if>
+    <ul>
+        <f:for each="{data.accordion_items}" as="item">
+            <li>{item.question}</li>
+        </f:for>
+    </ul>
+</div>

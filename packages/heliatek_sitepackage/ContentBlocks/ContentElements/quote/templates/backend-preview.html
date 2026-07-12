@@ -1,0 +1,4 @@
+<div>
+    <em>„{data.quote -> f:format.crop(maxCharacters: 100)}"</em>
+    <f:if condition="{data.author}"><br /><small>{data.author}<f:if condition="{data.author_role}"> – {data.author_role}</f:if></small></f:if>
+</div>
