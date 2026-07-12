@@ -2,6 +2,7 @@
 !/public/.htaccess
 /var/
 /vendor/
+/config/system/
 /composer.lock
 .env
 .DS_Store
