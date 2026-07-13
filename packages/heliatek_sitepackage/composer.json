@@ -8,6 +8,11 @@
         "typo3/cms-core": "^13.4",
         "typo3/cms-fluid-styled-content": "^13.4"
     },
+    "autoload": {
+        "psr-4": {
+            "Heliatek\\Sitepackage\\": "Classes/"
+        }
+    },
     "extra": {
         "typo3/cms": {
             "extension-key": "heliatek_sitepackage"

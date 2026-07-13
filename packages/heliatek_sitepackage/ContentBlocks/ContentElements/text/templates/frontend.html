@@ -1,0 +1,15 @@
+<section class="hl-section hl-textblock hl-textblock--{data.align}{f:if(condition: '{data.background} == \'alt\'', then: ' hl-section--alt')}{f:if(condition: '{data.background} == \'dark\'', then: ' hl-section--dark')}">
+    <div class="hl-container">
+        <div class="hl-textblock__inner">
+            <f:if condition="{data.kicker}">
+                <p class="hl-section__kicker">{data.kicker}</p>
+            </f:if>
+            <f:if condition="{data.headline}">
+                <h2>{data.headline}</h2>
+            </f:if>
+            <div class="hl-textblock__body">
+                <f:format.html>{data.bodytext}</f:format.html>
+            </div>
+        </div>
+    </div>
+</section>

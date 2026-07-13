@@ -3,15 +3,16 @@
         <f:if condition="{data.headline}">
             <h2>{data.headline}</h2>
         </f:if>
-        <div class="hl-stats__grid">
+        <div class="hl-stats__band">
             <f:for each="{data.stat_items}" as="item">
                 <div class="hl-stat">
-                    <div class="hl-stat__value">
-                        <span data-count-to="{item.value -> f:format.raw()}">{item.value}</span><f:if condition="{item.unit}"><span class="hl-stat__unit">{item.unit}</span></f:if>
-                    </div>
+                    <div class="hl-stat__value">{item.value}</div>
                     <div class="hl-stat__label">{item.label}</div>
                 </div>
             </f:for>
         </div>
+        <f:if condition="{data.footnote}">
+            <p class="hl-stats__footnote">{data.footnote -> f:format.nl2br()}</p>
+        </f:if>
     </div>
 </section>

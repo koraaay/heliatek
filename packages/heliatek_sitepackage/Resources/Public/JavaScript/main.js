@@ -68,6 +68,25 @@
         });
     }
 
+    // Vorher/Nachher-Slider
+    var comparers = document.querySelectorAll('[data-image-compare]');
+    comparers.forEach(function (root) {
+        var before = root.querySelector('[data-image-compare-before]');
+        var handle = root.querySelector('[data-image-compare-handle]');
+        var range = root.querySelector('[data-image-compare-range]');
+        if (!before || !handle || !range) {
+            return;
+        }
+        var apply = function (pct) {
+            before.style.width = pct + '%';
+            handle.style.left = pct + '%';
+        };
+        range.addEventListener('input', function () {
+            apply(range.value);
+        });
+        apply(range.value);
+    });
+
     // Dezente Scroll-Reveals (translateY + fade), respektiert reduced motion
     if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         var sections = document.querySelectorAll('.hl-main > section, .hl-main .hl-section');

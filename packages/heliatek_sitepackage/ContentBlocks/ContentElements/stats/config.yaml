@@ -9,7 +9,7 @@ fields:
     type: Checkbox
     renderType: checkboxToggle
     default: 0
-    description: 'Standard ist das Mint-Band; aktivieren für die dunkle Tech-Variante'
+    description: 'Standard: Überschrift auf hellem Grund, Zahlen im Mint-Band. Aktivieren für dunkle Sektion.'
   - identifier: stat_items
     type: Collection
     labelField: label
@@ -17,10 +17,11 @@ fields:
       - identifier: value
         type: Text
         required: true
-        description: 'Nur die Zahl, z. B. 6 oder 99,9 – sie wird beim Scrollen animiert hochgezählt'
-      - identifier: unit
-        type: Text
-        description: 'Einheit oder Zusatz hinter der Zahl, z. B. %, g/m² oder +'
+        description: 'Zahl oder Kurzangabe, z. B. ~2×, <2 kg, ≈2 mm, 50 cm'
       - identifier: label
         type: Text
         required: true
+  - identifier: footnote
+    type: Textarea
+    rows: 2
+    description: 'Kleiner grauer Hinweis unter dem Band, z. B. „Vorläufige Ziel- und Richtwerte …"'

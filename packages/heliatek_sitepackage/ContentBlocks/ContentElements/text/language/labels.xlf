@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="plaintext" original="labels.xlf" source-language="de" product-name="text">
+        <body>
+            <trans-unit id="title"><source>Textblock</source></trans-unit>
+            <trans-unit id="description"><source>Freier Textblock mit Überschrift – links oder zentriert, mit wählbarem Hintergrund</source></trans-unit>
+            <trans-unit id="kicker.label"><source>Dachzeile</source></trans-unit>
+            <trans-unit id="headline.label"><source>Überschrift</source></trans-unit>
+            <trans-unit id="bodytext.label"><source>Text</source></trans-unit>
+            <trans-unit id="align.label"><source>Ausrichtung</source></trans-unit>
+            <trans-unit id="background.label"><source>Hintergrund</source></trans-unit>
+        </body>
+    </file>
+</xliff>

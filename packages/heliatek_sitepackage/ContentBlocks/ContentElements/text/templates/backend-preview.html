@@ -1,0 +1,5 @@
+<div>
+    <f:if condition="{data.kicker}"><small>{data.kicker}</small><br /></f:if>
+    <f:if condition="{data.headline}"><strong>{data.headline}</strong></f:if>
+    <p>{data.bodytext -> f:format.stripTags() -> f:format.crop(maxCharacters: 140)}</p>
+</div>

@@ -21,9 +21,11 @@ packages/heliatek_sitepackage/         Sitepackage-Extension
 │   ├── accordion/                     Akkordeon / FAQ
 │   ├── logo_strip/                    Partner-/Referenzlogos
 │   ├── cta/                           Call-to-Action-Banner (Mint)
-│   ├── tech_compare/                  Bisher/Jetzt-Karten + Vergleichsbalken
+│   ├── tech_compare/                  Bisher/Jetzt-Karten + Vergleichsbalken + Spec-Liste
 │   ├── compare_table/                 Vergleichstabelle (Produkt A vs. B)
-│   └── image/                         Bild mit Kennzeichnungs-Badge
+│   ├── image/                         Bild mit Kennzeichnungs-Badge
+│   ├── image_compare/                 Vorher/Nachher-Slider (OPV vs. Perowskit)
+│   └── text/                          Freier Textblock (links/zentriert, Hintergrund)
 └── Resources/
     ├── Private/                       Seitentemplate, Header, Footer (Fluid)
     └── Public/Css/tokens.css          ⭐ Design-Tokens (zentrale Stellschrauben)
@@ -85,6 +87,34 @@ Nach Änderungen an einer `config.yaml` einmal ausführen:
 vendor/bin/typo3 cache:flush
 vendor/bin/typo3 extension:setup   # legt neue Datenbankfelder an
 ```
+
+## Fertige Beispielseite „HeliaSol v2" anlegen
+
+Die komplette Landingpage aus dem aktuellen Design (Award-Seite) lässt sich
+mit einem Befehl als echte TYPO3-Seite erzeugen:
+
+```bash
+vendor/bin/typo3 heliatek:seed:award-page
+```
+
+Das Kommando
+
+- kopiert die mitgelieferten Platzhalter-Bilder (SVG) nach `fileadmin/heliatek/`,
+- legt die Root-Seite (uid 1, „/") an, falls noch keine existiert,
+- baut alle 11 Sektionen als Inhaltselemente auf: Hero → Konzeptbild →
+  „Die Heliatek-DNA" (USP-Icons) → Vorher/Nachher-Slider → „Von Organisch zu
+  Perowskit" (Balken + Merkmale) → Kennzahlen-Band → Schichtaufbau → Referenzen
+  → Transparenz → FAQ → CTA.
+
+Danach ist die Seite unter `/` im Frontend sichtbar. Die Sektionen sind ganz
+normale Inhaltselemente – Redakteur:innen können sie im Backend bearbeiten,
+umsortieren oder löschen.
+
+> Die Bilder sind bewusst als beschriftete SVG-Platzhalter in Markenoptik
+> angelegt (das Produktbild ist im Design ohnehin als „Konzeptbild" gekennzeichnet).
+> Für den Livegang die Platzhalter in der Dateiliste durch echte Fotos
+> ersetzen – die Originale liegen im Heliatek-Design-Projekt (USP-Icons,
+> Referenzfotos, Schichtaufbau).
 
 ## Für Redakteur:innen: Seiten aus Sektionen zusammenbauen
 

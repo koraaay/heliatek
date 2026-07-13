@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="plaintext" original="labels.xlf" source-language="de" product-name="image-compare">
+        <body>
+            <trans-unit id="title"><source>Vorher/Nachher-Slider</source></trans-unit>
+            <trans-unit id="description"><source>Zwei Bilder übereinander mit ziehbarem Regler – z. B. HeliaSol (OPV) vs. HeliaSol v2 (Perowskit)</source></trans-unit>
+            <trans-unit id="before_image.label"><source>Bild links (Vorher)</source></trans-unit>
+            <trans-unit id="before_label.label"><source>Beschriftung links</source></trans-unit>
+            <trans-unit id="after_image.label"><source>Bild rechts (Nachher)</source></trans-unit>
+            <trans-unit id="after_label.label"><source>Beschriftung rechts</source></trans-unit>
+            <trans-unit id="dark_background.label"><source>Dunkle Sektion</source></trans-unit>
+        </body>
+    </file>
+</xliff>

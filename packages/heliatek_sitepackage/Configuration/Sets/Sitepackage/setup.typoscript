@@ -1,4 +1,11 @@
 # Heliatek Sitepackage – Frontend-Rendering
+config {
+    absRefPrefix = auto
+    no_cache = 0
+    debug = 0
+    contentObjectExceptionHandler = 0
+}
+
 page = PAGE
 page {
     typeNum = 0

@@ -7,9 +7,9 @@
             <trans-unit id="headline.label"><source>Überschrift (optional)</source></trans-unit>
             <trans-unit id="dark_background.label"><source>Dunkler Hintergrund</source></trans-unit>
             <trans-unit id="stat_items.label"><source>Kennzahlen</source></trans-unit>
-            <trans-unit id="stat_items.value.label"><source>Zahl</source></trans-unit>
-            <trans-unit id="stat_items.unit.label"><source>Einheit / Zusatz</source></trans-unit>
+            <trans-unit id="stat_items.value.label"><source>Zahl / Kurzangabe</source></trans-unit>
             <trans-unit id="stat_items.label.label"><source>Beschriftung</source></trans-unit>
+            <trans-unit id="footnote.label"><source>Fußnote (klein, grau)</source></trans-unit>
         </body>
     </file>
 </xliff>
