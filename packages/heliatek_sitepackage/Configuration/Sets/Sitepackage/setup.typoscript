@@ -39,6 +39,13 @@ page {
                 special.range = 0|-1
                 as = breadcrumb
             }
+            30 = menu
+            30 {
+                special = directory
+                special.value = 1
+                includeNotInMenu = 1
+                as = footerMenu
+            }
         }
     }
 
@@ -47,6 +54,7 @@ page {
     }
 
     includeCSS {
+        fonts = EXT:heliatek_sitepackage/Resources/Public/Css/fonts.css
         tokens = EXT:heliatek_sitepackage/Resources/Public/Css/tokens.css
         main = EXT:heliatek_sitepackage/Resources/Public/Css/main.css
     }

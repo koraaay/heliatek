@@ -1,4 +1,4 @@
-<section class="hl-section hl-imageblock">
+<section class="hl-section hl-imageblock{f:if(condition: data.framed, then: ' hl-imageblock--framed')}{f:if(condition: data.sheen, then: ' hl-imageblock--sheen')}">
     <div class="hl-container">
         <figure class="hl-imageblock__figure" style="aspect-ratio:{data.aspect -> f:format.raw()}">
             <f:for each="{data.image}" as="image">

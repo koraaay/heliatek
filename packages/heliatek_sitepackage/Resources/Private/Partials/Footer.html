@@ -5,9 +5,9 @@
             <p class="hl-footer__claim">Independent. Green. Future.</p>
         </div>
         <div class="hl-footer__meta">
-            <p>Impressum</p>
-            <p>Datenschutzerklärung</p>
-            <p>AGB</p>
+            <f:for each="{footerMenu}" as="item">
+                <a href="{item.link}" class="hl-footer__link">{item.title}</a>
+            </f:for>
             <p>&copy; {f:format.date(date: 'now', format: 'Y')} Heliatek GmbH</p>
         </div>
     </div>

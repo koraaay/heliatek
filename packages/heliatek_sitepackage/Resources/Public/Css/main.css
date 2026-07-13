@@ -315,6 +315,23 @@ a:hover {
     overflow: hidden;
 }
 
+/* Dezenter, driftender Glow im dunklen Hero (wie Award-Design) */
+.hl-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 900px 500px at 70% -10%, rgba(148, 232, 181, 0.12), transparent 65%),
+        radial-gradient(ellipse 760px 460px at 18% 115%, rgba(201, 206, 214, 0.12), transparent 60%);
+    pointer-events: none;
+    animation: hl-glow-drift 9s ease-in-out infinite;
+}
+
+@keyframes hl-glow-drift {
+    0%, 100% { opacity: 0.8; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(14px); }
+}
+
 .hl-hero__media {
     position: absolute;
     inset: 0;
@@ -343,6 +360,23 @@ a:hover {
 
 .hl-hero__headline {
     font: var(--text-hero);
+}
+
+/* Schimmerndes Metallic-Textfüllung auf der Hero-Headline */
+@media (prefers-reduced-motion: no-preference) {
+    .hl-hero__headline {
+        background: linear-gradient(110deg, #ffffff 38%, #9aa1ab 50%, #ffffff 62%);
+        background-size: 240% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        animation: hl-shimmer 8s linear infinite;
+    }
+}
+
+@keyframes hl-shimmer {
+    from { background-position: 200% 0; }
+    to { background-position: -200% 0; }
 }
 
 @media (max-width: 64rem) {
@@ -694,6 +728,22 @@ details[open] > .hl-accordion__question::after {
     margin: 0;
 }
 
+.hl-footer__link {
+    color: var(--hel-ink);
+    text-decoration: none;
+}
+
+.hl-footer__link:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 40rem) {
+    .hl-footer__meta {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
+
 /* ---------- Hero-Badge ---------- */
 .hl-hero__badge {
     display: inline-block;
@@ -868,6 +918,15 @@ details[open] > .hl-accordion__question::after {
     }
 }
 
+/* Metallisch schimmernder Balken für die hervorgehobene (Perowskit-)Zeile */
+@media (prefers-reduced-motion: no-preference) {
+    .hl-comparebar--emphasized .hl-comparebar__fill {
+        background-image: var(--hel-pero-grad) !important;
+        background-size: 200% 100%;
+        animation: hl-shimmer 4s linear infinite;
+    }
+}
+
 /* ---------- Vergleichstabelle ---------- */
 .hl-table {
     border-top: var(--border-strong-1);
@@ -918,6 +977,30 @@ details[open] > .hl-accordion__question::after {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.hl-imageblock--framed .hl-imageblock__figure {
+    border: var(--border-strong-1);
+}
+
+/* Über das Produktbild streichender Glanz (Sheen) */
+@media (prefers-reduced-motion: no-preference) {
+    .hl-imageblock--sheen .hl-imageblock__figure::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 34%;
+        background: linear-gradient(100deg, transparent 15%, rgba(255, 255, 255, 0.4) 50%, transparent 85%);
+        animation: hl-sheen 8s ease-in-out infinite;
+        pointer-events: none;
+    }
+}
+
+@keyframes hl-sheen {
+    0% { transform: translateX(-140%) skewX(-16deg); }
+    55%, 100% { transform: translateX(380%) skewX(-16deg); }
 }
 
 .hl-imageblock__annotation {

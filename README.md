@@ -110,11 +110,28 @@ Danach ist die Seite unter `/` im Frontend sichtbar. Die Sektionen sind ganz
 normale Inhaltselemente – Redakteur:innen können sie im Backend bearbeiten,
 umsortieren oder löschen.
 
+Die Seite wird **zweisprachig** aufgebaut: Deutsch unter `/`, Englisch unter
+`/en/`. Zusätzlich entstehen die **Rechtsseiten** Impressum, Datenschutz und AGB
+(mit Platzhaltertext), die automatisch im Footer verlinkt werden.
+
 > Die Bilder sind bewusst als beschriftete SVG-Platzhalter in Markenoptik
 > angelegt (das Produktbild ist im Design ohnehin als „Konzeptbild" gekennzeichnet).
 > Für den Livegang die Platzhalter in der Dateiliste durch echte Fotos
 > ersetzen – die Originale liegen im Heliatek-Design-Projekt (USP-Icons,
 > Referenzfotos, Schichtaufbau).
+
+## Schriften (DSGVO)
+
+Source Serif 4 (Headlines) und Inter (Text) werden **lokal** aus
+`Resources/Public/Fonts` geladen (`fonts.css`) – kein externer Google-Fonts-Abruf.
+Sollen die Original-Heliatek-Fonts verwendet werden, deren woff2-Dateien dort
+ablegen und die `@font-face`-Regeln in `fonts.css` anpassen.
+
+## Rechtsseiten & Footer
+
+Die Rechtsseiten liegen als eigene Seiten (aus der Hauptnavigation ausgeblendet)
+unter der Startseite. Der Footer listet sie automatisch über ein
+Verzeichnis-Menü (`footerMenu`) – sprachabhängig mit den korrekten URLs.
 
 ## Für Redakteur:innen: Seiten aus Sektionen zusammenbauen
 

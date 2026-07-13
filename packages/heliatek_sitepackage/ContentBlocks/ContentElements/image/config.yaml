@@ -22,3 +22,13 @@ fields:
         value: '21/9'
       - label: 'Originalformat'
         value: 'auto'
+  - identifier: framed
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0
+    description: 'Dünne schwarze Kontur um das Bild'
+  - identifier: sheen
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0
+    description: 'Dezenter, über das Bild streichender Glanz (für Produkt-/Konzeptbilder)'
