@@ -1,0 +1,25 @@
+name: heliatek/image-compare
+title: Vorher/Nachher-Slider
+group: heliatek
+prefixFields: false
+fields:
+  - identifier: before_image
+    type: File
+    maxitems: 1
+    minitems: 1
+    allowed: common-image-types
+  - identifier: before_label
+    type: Text
+    default: 'Bisher'
+  - identifier: after_image
+    type: File
+    maxitems: 1
+    minitems: 1
+    allowed: common-image-types
+  - identifier: after_label
+    type: Text
+    default: 'Neu'
+  - identifier: dark_background
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 1

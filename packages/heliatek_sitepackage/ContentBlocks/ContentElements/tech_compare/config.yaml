@@ -9,6 +9,14 @@ fields:
   - identifier: headline
     type: Text
     required: true
+  - identifier: intro
+    type: Textarea
+    rows: 3
+  - identifier: dark_background
+    type: Checkbox
+    renderType: checkboxToggle
+    default: 0
+    description: 'Dunkle Sektion (wie im Award-Design)'
   - identifier: compare_cards
     type: Collection
     labelField: card_title
@@ -29,7 +37,7 @@ fields:
         default: 0
   - identifier: bars_label
     type: Text
-    description: 'Überschrift über den Vergleichsbalken, z. B. "Effizienz im Vergleich (Richtwert)" – leer lassen, wenn keine Balken gezeigt werden'
+    description: 'Überschrift über den Vergleichsbalken, z. B. "Effizienz im Vergleich (Richtwert)"'
   - identifier: compare_bars
     type: Collection
     labelField: label
@@ -39,7 +47,7 @@ fields:
         required: true
       - identifier: bar_value
         type: Text
-        description: 'Optionaler Wert rechts neben der Beschriftung, z. B. ~2×'
+        description: 'Optionaler Wert rechts, z. B. 1× oder ~2×'
       - identifier: percent
         type: Number
         format: integer
@@ -54,3 +62,13 @@ fields:
         type: Checkbox
         renderType: checkboxToggle
         default: 0
+  - identifier: spec_items
+    type: Collection
+    labelField: spec_label
+    description: 'Zweispaltige Merkmalliste neben den Balken (z. B. Zelltechnologie → Perowskit statt Organisch)'
+    fields:
+      - identifier: spec_label
+        type: Text
+        required: true
+      - identifier: spec_value
+        type: Text

@@ -1,0 +1,32 @@
+name: heliatek/text
+title: Textblock
+group: heliatek
+prefixFields: false
+fields:
+  - identifier: kicker
+    type: Text
+  - identifier: headline
+    type: Text
+  - identifier: bodytext
+    type: Textarea
+    enableRichtext: true
+  - identifier: align
+    type: Select
+    renderType: selectSingle
+    default: left
+    items:
+      - label: 'Linksbündig'
+        value: left
+      - label: 'Zentriert'
+        value: center
+  - identifier: background
+    type: Select
+    renderType: selectSingle
+    default: default
+    items:
+      - label: 'Weiß'
+        value: default
+      - label: 'Hellgrau (Papier)'
+        value: alt
+      - label: 'Dunkel'
+        value: dark

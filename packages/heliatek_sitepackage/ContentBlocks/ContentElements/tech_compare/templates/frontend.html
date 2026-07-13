@@ -1,9 +1,12 @@
-<section class="hl-section">
+<section class="hl-section hl-compare{f:if(condition: data.dark_background, then: ' hl-section--dark')}">
     <div class="hl-container">
         <f:if condition="{data.kicker}">
             <p class="hl-section__kicker">{data.kicker}</p>
         </f:if>
         <h2>{data.headline}</h2>
+        <f:if condition="{data.intro}">
+            <p class="hl-section__intro">{data.intro -> f:format.nl2br()}</p>
+        </f:if>
         <f:if condition="{data.compare_cards}">
             <div class="hl-compare__cards">
                 <f:for each="{data.compare_cards}" as="card">
@@ -17,22 +20,36 @@
                 </f:for>
             </div>
         </f:if>
-        <f:if condition="{data.compare_bars}">
-            <div class="hl-compare__bars">
-                <f:if condition="{data.bars_label}">
-                    <p class="hl-compare__barslabel">{data.bars_label}</p>
-                </f:if>
-                <f:for each="{data.compare_bars}" as="bar">
-                    <div class="hl-comparebar{f:if(condition: bar.emphasized, then: ' hl-comparebar--emphasized')}">
-                        <div class="hl-comparebar__head">
-                            <span>{bar.label}</span>
-                            <f:if condition="{bar.bar_value}"><span>{bar.bar_value}</span></f:if>
-                        </div>
-                        <div class="hl-comparebar__track">
-                            <div class="hl-comparebar__fill" data-bar-percent="{bar.percent}" style="background:{bar.bar_color}"></div>
-                        </div>
+        <f:if condition="{data.compare_bars} || {data.spec_items}">
+            <div class="hl-compare__split">
+                <f:if condition="{data.compare_bars}">
+                    <div class="hl-compare__bars">
+                        <f:if condition="{data.bars_label}">
+                            <p class="hl-compare__barslabel">{data.bars_label}</p>
+                        </f:if>
+                        <f:for each="{data.compare_bars}" as="bar">
+                            <div class="hl-comparebar{f:if(condition: bar.emphasized, then: ' hl-comparebar--emphasized')}">
+                                <div class="hl-comparebar__head">
+                                    <span>{bar.label}</span>
+                                    <f:if condition="{bar.bar_value}"><span>{bar.bar_value}</span></f:if>
+                                </div>
+                                <div class="hl-comparebar__track">
+                                    <div class="hl-comparebar__fill" data-bar-percent="{bar.percent}" style="background:{bar.bar_color}"></div>
+                                </div>
+                            </div>
+                        </f:for>
                     </div>
-                </f:for>
+                </f:if>
+                <f:if condition="{data.spec_items}">
+                    <dl class="hl-compare__specs">
+                        <f:for each="{data.spec_items}" as="spec">
+                            <div class="hl-compare__specrow">
+                                <dt>{spec.spec_label}</dt>
+                                <dd>{spec.spec_value}</dd>
+                            </div>
+                        </f:for>
+                    </dl>
+                </f:if>
             </div>
         </f:if>
     </div>

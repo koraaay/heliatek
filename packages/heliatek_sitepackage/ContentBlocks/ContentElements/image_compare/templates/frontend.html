@@ -1,0 +1,27 @@
+<section class="hl-section hl-imgcompare-section{f:if(condition: data.dark_background, then: ' hl-section--dark')}">
+    <div class="hl-container">
+        <div class="hl-imgcompare" data-image-compare>
+            <div class="hl-imgcompare__after">
+                <f:for each="{data.after_image}" as="img">
+                    <f:image image="{img}" alt="{img.alternative}" loading="lazy" />
+                </f:for>
+                <f:if condition="{data.after_label}">
+                    <span class="hl-imgcompare__label hl-imgcompare__label--after">{data.after_label}</span>
+                </f:if>
+            </div>
+            <div class="hl-imgcompare__before" data-image-compare-before>
+                <f:for each="{data.before_image}" as="img">
+                    <f:image image="{img}" alt="{img.alternative}" loading="lazy" />
+                </f:for>
+                <f:if condition="{data.before_label}">
+                    <span class="hl-imgcompare__label hl-imgcompare__label--before">{data.before_label}</span>
+                </f:if>
+            </div>
+            <div class="hl-imgcompare__handle" data-image-compare-handle aria-hidden="true">
+                <span class="hl-imgcompare__grip">&#8596;</span>
+            </div>
+            <input class="hl-imgcompare__range" type="range" min="0" max="100" value="50"
+                   aria-label="{data.before_label} und {data.after_label} vergleichen" data-image-compare-range />
+        </div>
+    </div>
+</section>

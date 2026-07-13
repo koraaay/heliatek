@@ -6,6 +6,11 @@
             <trans-unit id="description"><source>Bisher/Jetzt-Karten mit Farbmarkern plus animierte Vergleichsbalken (z. B. OPV vs. Perowskit)</source></trans-unit>
             <trans-unit id="kicker.label"><source>Dachzeile</source></trans-unit>
             <trans-unit id="headline.label"><source>Überschrift</source></trans-unit>
+            <trans-unit id="intro.label"><source>Einleitungstext</source></trans-unit>
+            <trans-unit id="dark_background.label"><source>Dunkle Sektion</source></trans-unit>
+            <trans-unit id="spec_items.label"><source>Merkmalliste (neben den Balken)</source></trans-unit>
+            <trans-unit id="spec_items.spec_label.label"><source>Merkmal</source></trans-unit>
+            <trans-unit id="spec_items.spec_value.label"><source>Wert</source></trans-unit>
             <trans-unit id="compare_cards.label"><source>Vergleichs-Karten</source></trans-unit>
             <trans-unit id="compare_cards.card_title.label"><source>Titel (z. B. „Bisher – HeliaSol (OPV)")</source></trans-unit>
             <trans-unit id="compare_cards.card_text.label"><source>Beschreibung</source></trans-unit>
