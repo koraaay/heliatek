@@ -1,0 +1,22 @@
+<section class="hl-section">
+    <div class="hl-container">
+        <f:if condition="{data.kicker}">
+            <p class="hl-section__kicker">{data.kicker}</p>
+        </f:if>
+        <h2>{data.headline}</h2>
+        <div class="hl-table">
+            <div class="hl-table__row hl-table__row--head">
+                <div>{data.feature_label}</div>
+                <div>{data.col_a_label}</div>
+                <div>{data.col_b_label}</div>
+            </div>
+            <f:for each="{data.table_rows}" as="row">
+                <div class="hl-table__row">
+                    <div>{row.feature}</div>
+                    <div>{row.value_a}</div>
+                    <div class="hl-table__value-b">{row.value_b}</div>
+                </div>
+            </f:for>
+        </div>
+    </div>
+</section>

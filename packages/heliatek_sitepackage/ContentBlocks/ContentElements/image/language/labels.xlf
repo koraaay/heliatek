@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file datatype="plaintext" original="labels.xlf" source-language="de" product-name="image">
+        <body>
+            <trans-unit id="title"><source>Bild (mit Kennzeichnung)</source></trans-unit>
+            <trans-unit id="description"><source>Großes Bild mit optionaler Kennzeichnung – z. B. „Konzeptbild — echtes Produktfoto folgt"</source></trans-unit>
+            <trans-unit id="image.label"><source>Bild</source></trans-unit>
+            <trans-unit id="annotation.label"><source>Kennzeichnung (Mono-Schrift, unten rechts)</source></trans-unit>
+            <trans-unit id="aspect.label"><source>Bildformat</source></trans-unit>
+        </body>
+    </file>
+</xliff>

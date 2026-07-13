@@ -4,6 +4,7 @@
         <body>
             <trans-unit id="title"><source>Hero-Bühne</source></trans-unit>
             <trans-unit id="description"><source>Großflächige Einstiegssektion mit Überschrift, Hintergrundbild und Buttons</source></trans-unit>
+            <trans-unit id="badge.label"><source>Badge (Mint-Kontur, z. B. „Neu · Arbeitstitel …")</source></trans-unit>
             <trans-unit id="subheadline.label"><source>Dachzeile (klein, über der Überschrift)</source></trans-unit>
             <trans-unit id="headline.label"><source>Überschrift</source></trans-unit>
             <trans-unit id="teaser.label"><source>Einleitungstext</source></trans-unit>

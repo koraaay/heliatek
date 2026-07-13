@@ -1,0 +1,56 @@
+name: heliatek/tech-compare
+title: Technologie-Vergleich
+group: heliatek
+prefixFields: false
+fields:
+  - identifier: kicker
+    type: Text
+    default: 'Was sich ändert'
+  - identifier: headline
+    type: Text
+    required: true
+  - identifier: compare_cards
+    type: Collection
+    labelField: card_title
+    maxitems: 2
+    fields:
+      - identifier: card_title
+        type: Text
+        required: true
+      - identifier: card_text
+        type: Textarea
+        rows: 4
+      - identifier: marker_color
+        type: Color
+        default: '#8b5fbf'
+      - identifier: highlight
+        type: Checkbox
+        renderType: checkboxToggle
+        default: 0
+  - identifier: bars_label
+    type: Text
+    description: 'Überschrift über den Vergleichsbalken, z. B. "Effizienz im Vergleich (Richtwert)" – leer lassen, wenn keine Balken gezeigt werden'
+  - identifier: compare_bars
+    type: Collection
+    labelField: label
+    fields:
+      - identifier: label
+        type: Text
+        required: true
+      - identifier: bar_value
+        type: Text
+        description: 'Optionaler Wert rechts neben der Beschriftung, z. B. ~2×'
+      - identifier: percent
+        type: Number
+        format: integer
+        default: 50
+        range:
+          lower: 0
+          upper: 100
+      - identifier: bar_color
+        type: Color
+        default: '#111111'
+      - identifier: emphasized
+        type: Checkbox
+        renderType: checkboxToggle
+        default: 0

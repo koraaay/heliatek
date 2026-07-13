@@ -51,6 +51,23 @@
         });
     }
 
+    // Vergleichsbalken wachsen beim Einscrollen
+    var bars = document.querySelectorAll('[data-bar-percent]');
+    if (bars.length && 'IntersectionObserver' in window) {
+        var barObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.style.width = entry.target.getAttribute('data-bar-percent') + '%';
+                    barObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        bars.forEach(function (el) {
+            barObserver.observe(el);
+        });
+    }
+
     // Dezente Scroll-Reveals (translateY + fade), respektiert reduced motion
     if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         var sections = document.querySelectorAll('.hl-main > section, .hl-main .hl-section');
