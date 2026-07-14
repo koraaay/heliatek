@@ -7,6 +7,8 @@
             <trans-unit id="image.label"><source>Bild</source></trans-unit>
             <trans-unit id="annotation.label"><source>Kennzeichnung (Mono-Schrift, unten rechts)</source></trans-unit>
             <trans-unit id="aspect.label"><source>Bildformat</source></trans-unit>
+            <trans-unit id="framed.label"><source>Mit Kontur</source></trans-unit>
+            <trans-unit id="sheen.label"><source>Glanz-Effekt</source></trans-unit>
         </body>
     </file>
 </xliff>

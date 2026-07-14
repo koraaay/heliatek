@@ -8,11 +8,9 @@
 
    FLAG Font-Substitution (siehe Design-System-readme):
    Original-Webfonts lagen nicht vor. Substitute: Source Serif 4
-   (Serif-Headlines) und Inter (Sans). Sobald echte Font-Dateien
-   vorliegen, den Import durch lokale @font-face-Regeln ersetzen
-   (DSGVO: Google-Fonts-Import vor Livegang lokal hosten!).
+   (Serif-Headlines) und Inter (Sans) – lokal gehostet in Resources/Public/Fonts
+   (siehe fonts.css). DSGVO-konform, kein externer Google-Fonts-Load.
    ========================================================= */
-@import url("https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
     /* Base */
